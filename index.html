@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+    <! primary meta tag>
+    <title>Weatherio</title>
+    <meta content="Weather" name="title">
+    <meta content="A weather app made by Hoa" name="description">
+
+    <!--favicon -->
+    <link href="favicon.svg" rel="shortcut icon" type="image/x-icon">
+
+    <!--google font -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+    <script defer src="./assets/js/app.js" type="module"></script>
+    <script src="./assets/js/route.js" type="module"></script>
+
+    <script>
+
+    </script>
+
+</head>
+<body>
+
+<!--Header-->
+<header class="header">
+    <div class="container">
+        <a class="logo" href="#/current-location">
+            <img alt="logo" height="58" src="./assets/images/logo.png" width="364">
+        </a>
+
+        <div class="search-view" data-search-view>
+            <div class="search-wrapper">
+                <input autocomplete="off" class="search-field" data-search-field id="" name="search"
+                       placeholder="Search city... " type="search">
+                <span class="m-icon leading-icon">search</span>
+
+                <button aria-label="close search" class="icon-btn leading-icon has-state" data-search-toggler>
+                    <span class="m-icon">arrow_back</span>
+                </button>
+            </div>
+            <div class="search-result" data-search-result>
+
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <button aria-label="open search" class="icon-btn has-state" data-search-toggler>
+                <span class="m-icon icon">search</span>
+            </button>
+
+            <a class="btn-primary has-state" data-current-location-btn href="#/current-location">
+                <span class="m-icon">my_location</span>
+                <span class="span">Current Location</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!--Main-->
+
+<main>
+    <article class="container" data-container>
+        <div class="content-left">
+
+            <!--CURRENT WEATHER-->
+            <section aria-label="current weather" class="section current-weather" data-current-weather>
+
+            </section>
+
+
+            <!--FORECAST -->
+            <section aria-labelledby="forecast-label" class="section forecast" data-5-day-forecast>
+
+            </section>
+        </div>
+        <div class="content-right">
+            <!--HIGHLIGHTS -->
+            <section aria-labelledby="highlights-label" class="section highlights" data-highlights>
+            </section>
+
+            <!--            HOURLY FOReCAST-->
+            <section aria-label="hourly forecast" class="section hourly-forecast" data-hourly-forecst>
+
+            </section>
+
+            <!--            Footer-->
+            <footer class="footer">
+                <p class="body-3">Copyright 2023 Nguyen Thuan Hoa</p>
+                <p class="body-3">
+                    Powered By <a href="https://openweathermap.org/api" rel="noopener" target="_blank"
+                                  title="Free OpenWeather API">
+                    <img alt="OpenWeather" height="30" loading="lazy" src="./assets/images/openweather.png" width="150">
+                </a>
+                </p>
+            </footer>
+        </div>
+        <div class="loading" data-loading></div>
+
+
+    </article>
+</main>
+
+
+<!--
+
+#404 SECTION
+
+-->
+
+<section class="error-content" data-error-content>
+    <h2 class="heading">404</h2>
+    <p class="body-1">Page not found!</p>
+    <a class="btn-primary" href="#/weather?lat=16.4639321&lon=107.5863388">
+        <span class="span">Go Home</span>
+    </a>
+</section>
+
+
+</body>
+
+</html>
