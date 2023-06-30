@@ -7,7 +7,7 @@ export const fetchData = (URL, callback) => {
         .then(res => res.json())
         .then(data => callback(data))
 }
-console.log('hoa')
+
 
 export const url = {
     currentWeather(lat, lon) {

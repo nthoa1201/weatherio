@@ -40,7 +40,6 @@ searchField.addEventListener('input', () => {
     if (searchField.value) {
         searchTimeout = setTimeout(() => {
             fetchData(url.geo(searchField.value), location => {
-                console.log(location)
                 searchField.classList.remove('searching')
                 searchResult.classList.add('active')
                 searchResult.innerHTML = `
@@ -145,7 +144,6 @@ export const updateWeather = (lat, lon) => {
         `
         fetchData(url.reverseGeo(lat, lon), ([{name, country}]) => {
             card.querySelector('[data-location]').innerHTML = `${name}, ${country}`
-            console.log('haha')
         })
 
         currentWeatherSection.appendChild(card)
