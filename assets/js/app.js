@@ -237,7 +237,6 @@ export const updateWeather = (lat, lon) => {
                                 <p class="title-1">${parseInt(feels_like)}&deg;<sup>c</sup></p>
                             </div>
                         </div>
-
                     </div>
             `
 
